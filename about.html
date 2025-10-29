@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>About | Medical Perception</title>
+    <link rel="stylesheet" href="/style/style.css" />
+</head>
+
+<body class="app-page">
+    <header class="topbar">
+        <div class="brand">Medical Perception</div>
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="about.html" class="active">About</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+        <div class="top-actions">
+            <span id="welcome-user" class="muted"></span>
+            <button id="logout-btn" class="btn outline">Logout</button>
+        </div>
+    </header>
+
+    <main class="container single">
+        <section class="card">
+            <h2>About Medical Perception</h2>
+            <p>
+                <strong>Medical Perception</strong> is a demo web application that helps users
+                understand common symptoms and possible remedies.
+                It allows you to enter symptoms and receive general health suggestions instantly.
+            </p>
+            <p>
+                ⚕️ This website was built using <strong>HTML, CSS, and JavaScript</strong> —
+                no backend or database is used. All user information (like login credentials)
+                is stored securely within your own browser using <strong>localStorage</strong>.
+            </p>
+            <p>
+                This project was created for educational purposes to demonstrate basic
+                web technologies, user authentication, and form handling. It should not
+                be used for real medical diagnosis or treatment.
+            </p>
+            <p class="muted small">Always consult a certified healthcare professional for accurate diagnosis and
+                treatment.</p>
+        </section>
+
+        <section id="testimonials" class="card">
+            <h2>Testimonials</h2>
+
+            <div id="testimonial-list">
+
+                <div class="testimonial-item">
+                    <blockquote>
+                        <p>"This service is absolutely fantastic! It changed the way I approach my daily tasks. Highly
+                            recommended."</p>
+                    </blockquote>
+                    <cite>– Alex Johnson</cite>
+                </div>
+
+                <div class="testimonial-item">
+                    <blockquote>
+                        <p>"I was skeptical at first, but the results speak for themselves. The team was supportive and
+                            the product exceeded my expectations."</p>
+                    </blockquote>
+                    <cite>– Sarah Chen</cite>
+                </div>
+
+                <div class="testimonial-item">
+                    <blockquote>
+                        <p>"A game-changer for our business. We've seen a significant improvement in efficiency since we
+                            started using this."</p>
+                    </blockquote>
+                    <cite>– David Lee</cite>
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+    </main>
+
+    <footer class="site-footer small muted">
+        © <span id="year"></span> Medical Perception — Demo
+    </footer>
+
+    <script src="/script/script.js"></script>
+    <script>
+        cument.addEventListener('DOMContentLoaded', () => {
+            initAboutTestimonials(); // Call only on about page
+        });
+        document.addEventListener('DOMContentLoaded', () => {
+            initGenericPage();
+
+        });
+    </script>
+</body>
+
+</html>

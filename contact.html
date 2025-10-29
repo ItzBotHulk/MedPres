@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Contact Us | Medical Perception</title>
+  <link rel="stylesheet" href="/style/style.css" />
+</head>
+<body class="app-page">
+  <header class="topbar">
+    <div class="brand">Medical Perception</div>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="contact.html" class="active">Contact</a>
+    </nav>
+    <div class="top-actions">
+      <span id="welcome-user" class="muted"></span>
+      <button id="logout-btn" class="btn outline">Logout</button>
+    </div>
+  </header>
+
+  <main class="container single">
+    <section class="card">
+      <h2>Contact Us</h2>
+      <p>Have suggestions, feedback, or questions about the app? Fill out the form below.</p>
+
+      <form id="contact-form" class="form">
+        <label>
+          Name
+          <input type="text" id="contact-name" required />
+        </label>
+        <label>
+          Email
+          <input type="email" id="contact-email" required />
+        </label>
+        <label>
+          Message
+          <textarea id="contact-message" rows="5" required placeholder="Type your message here..."></textarea>
+        </label>
+        <button type="submit" class="btn">Send Message</button>
+        <p id="contact-msg" class="msg"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer small muted">
+    © <span id="year"></span> Medical Perception — Demo
+  </footer>
+
+  <script src="/script/script.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      initContactPage();
+    });
+  </script>
+</body>
+</html>

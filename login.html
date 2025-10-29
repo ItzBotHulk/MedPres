@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Medical Perception — Login</title>
+  <link rel="stylesheet" href="style/style.css" />
+</head>
+<body class="auth-page">
+  <main class="card auth-card">
+    <h1 class="brand">Medical Perception</h1>
+
+    <div id="auth-forms">
+      <!-- Login Form -->
+      <form id="login-form" class="form">
+        <h2>Login</h2>
+        <label>
+          Username
+          <input type="text" id="login-username" required />
+        </label>
+        <label>
+          Password
+          <input type="password" id="login-password" required />
+        </label>
+        <button type="submit" class="btn">Login</button>
+        <p class="muted">No account? <a id="show-register" href="#">Register here</a></p>
+        <p id="login-msg" class="msg"></p>
+      </form>
+
+      <!-- Register Form (hidden by default) -->
+      <form id="register-form" class="form hidden">
+        <h2>Create account</h2>
+        <label>
+          Username
+          <input type="text" id="reg-username" required />
+        </label>
+        <label>
+          Password
+          <input type="password" id="reg-password" required minlength="4" />
+        </label>
+        <label>
+          Confirm Password
+          <input type="password" id="reg-password-confirm" required />
+        </label>
+        <button type="submit" class="btn">Register</button>
+        <p class="muted">Already have an account? <a id="show-login" href="#">Login</a></p>
+        <p id="reg-msg" class="msg"></p>
+      </form>
+    </div>
+
+    <footer class="small muted">This is a demo. Do not use real credentials.</footer>
+  </main>
+
+  <script src="/script/script.js"></script>
+  <script>
+    // Page-specific init
+    document.addEventListener('DOMContentLoaded', () => {
+      initAuthPage();
+    });
+  </script>
+</body>
+</html>

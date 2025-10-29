@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Feedback | Medical Perception</title>
+  <link rel="stylesheet" href="/style/style.css" />
+</head>
+<body class="app-page">
+  <header class="topbar">
+    <div class="brand">Medical Perception</div>
+    <button class="menu-toggle" id="menu-toggle">☰</button>
+    <nav class="nav-links" id="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="feedback.html" class="active">Feedback</a>
+    </nav>
+    <div class="top-actions">
+      <span id="welcome-user" class="muted"></span>
+      <button id="logout-btn" class="btn outline">Logout</button>
+    </div>
+  </header>
+
+  <main class="container single">
+    <section class="card">
+      <h2>Feedback Received</h2>
+      <div id="feedback-list"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer small muted">
+    © <span id="year"></span> Medical Perception — Demo
+  </footer>
+
+  <script src="/script/script.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      initFeedbackPage();
+
+    });
+  </script>
+</body>
+</html>

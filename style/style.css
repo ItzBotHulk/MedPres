@@ -1,3 +1,7 @@
+*{
+  margin: 0;
+  padding: 0;
+}
 :root {
   --bg: #f6f8fb;
   --card: #ffffff;
@@ -15,11 +19,8 @@
   box-sizing: border-box
 }
 
-html,
-body {
-  height: 100%
-}
 
+/* 
 body {
   margin: 0;
   background: linear-gradient(180deg, var(--bg), #eef3f9);
@@ -27,7 +28,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   line-height: 1.4;
-}
+} */
 
 #symptom-other {
   padding: 5%;
@@ -72,10 +73,78 @@ body {
   box-shadow: 0 6px 18px rgba(20, 30, 60, 0.06);
 }
 
+.img{
+  height: 50vh;
+  display: block;
+  position: absolute;
+  top: 10vh;
+  left: 1vw;
+}
+.img2{
+  height: 40vh;
+  display: block;
+  position: absolute;
+  bottom: 80vh;
+  right: 0vw;
+
+}
+.features1{
+  text-align: center;
+  border: 2px solid black;
+}
+
+.container{
+  width:min(1100px, 92%);
+  margin-inline:auto;
+}
+
+.grid{
+  display:grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-top:1px solid var(--border);
+  border-bottom:1px solid var(--border);
+}
+
+/* Updated from .card to .fartical */
+.fartical{
+  padding:40px 30px;
+  display:flex;
+  flex-direction:column;
+  gap:8px;
+  background:#fff;
+}
+
+.fartical:not(:first-child){
+  border-left:1px solid var(--border);
+}
+
+.icon{
+  width:88px; height:88px;
+  border-radius:50%;
+  display:grid; place-items:center;
+}
+.icon svg{ width:40px; height:40px; fill:currentColor }
+
+.icon[data-variant="teal"]  { background:var(--teal-100);  color:var(--teal-600); }
+.icon[data-variant="amber"] { background:var(--amber-100); color:var(--amber-600); }
+.icon[data-variant="rose"]  { background:var(--rose-100);  color:var(--rose-600); }
+
+h3{ margin:0; font-size:28px; font-weight:700; }
+p{ margin:0; font-size:16px; line-height:1.8; color:var(--muted); }
+
+@media (max-width: 992px){
+  .grid{ grid-template-columns:1fr; border:none; }
+  .fartical{
+    border:1px solid var(--border);
+    border-radius:14px;
+    margin-bottom:18px;
+  }
+}
+
 /* layout */
 .container {
   max-width: 1024px;
-  margin: 28px auto;
+  margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 420px;
   gap: 20px;
@@ -409,9 +478,7 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   background-color: var(--bg-color);
   color: var(--text-color);
-  margin: 0;
-  padding-top: var(--header-height);
-  /* Space for the fixed topbar */
+
   line-height: 1.6;
 }
 
@@ -442,6 +509,10 @@ a:hover {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
   padding: 1.5rem 2rem;
   margin-bottom: 2rem;
+}
+.flex{
+  display: flex;
+  justify-content: center;
 }
 
 .muted {
@@ -475,7 +546,13 @@ a:hover {
   color: var(--primary-color);
 }
 
+.logo{
+  height: 6vh;
+  margin-right: 2vh;
+}
+
 .nav-links {
+  margin: 5vh;
   display: flex;
   gap: 1.5rem;
 }
@@ -587,4 +664,352 @@ main p:last-child {
 .site-footer {
   text-align: center;
   padding: 2rem 1rem;
+}
+
+/* login added style  */
+/* --- 1. Global & Utility Styles --- */
+:root {
+    --color-pink: #ed406e;
+    --color-orange: #f8c983;
+    --color-greenish: #93d4c6;
+    --color-light-pink: #f7a0b5;
+    --color-text-dark: #2c3e50;
+    --color-text-light: #555;
+    --color-border: #ccc;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    /* Optional: Use a clean, modern font-family like Poppins or a system font */
+    font-family: Arial, sans-serif; 
+}
+
+body {
+    background-color: #ffffff; /* White background */
+    min-height: 100vh;
+    overflow-x: hidden; /* Prevent horizontal scroll from decorations */
+    position: relative;
+}
+
+/* --- 2. Background Decorations --- */
+.background-decor {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Keep them behind the content */
+}
+
+.decor-circle {
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0.6; /* Slight transparency */
+}
+
+.top-left {
+    width: 80px;
+    height: 80px;
+    background-color: var(--color-orange);
+    top: 50px;
+    left: 50px;
+}
+
+.bottom-left {
+    width: 40px;
+    height: 40px;
+    background-color: var(--color-light-pink);
+    bottom: 30px;
+    left: 10px;
+}
+
+.middle-right-large {
+    width: 300px;
+    height: 300px;
+    background-color: var(--color-greenish);
+    bottom: -150px; /* Position it partially off-screen */
+    right: 200px;
+    transform: rotate(45deg); /* To create the slightly distorted shape */
+    border-radius: 40%; /* Makes it a blob-like shape */
+}
+
+.top-right-small {
+    width: 20px;
+    height: 20px;
+    background-color: #58c0c4;
+    top: 50px;
+    right: 150px;
+}
+
+
+/* --- 3. Main Layout (Flexbox) --- */
+.container {
+    display: flex;
+    max-width: 1400px; 
+    /* margin: 100vh 0 0 0; */
+    /* padding-top: 20vh; */
+    min-height: 100vh;
+    align-items: center; 
+}
+
+.content-left {
+    flex: 1; /* Takes up one part of the space */
+    padding-right: 50px;
+}
+
+.mockup-right {
+    flex: 1; /* Takes up one part of the space */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* --- 4. Typography --- */
+.main-heading {
+    font-size: 3.2rem;
+    font-weight: 900;
+    line-height: 1.1;
+    color: var(--color-text-dark);
+    margin-bottom: 20px;
+}
+
+.main-heading strong {
+    /* To make "Prescription Management" a slightly lighter color */
+    color: var(--color-text-dark); 
+    font-weight: 900; 
+}
+
+.sub-text {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: var(--color-text-light);
+    margin-bottom: 40px;
+}
+
+/* --- 5. Form & Buttons --- */
+.email-form {
+    display: flex;
+    align-items: stretch;
+    max-width: 450px;
+    margin-bottom: 20px;
+}
+
+.email-input {
+    flex: 1;
+    padding: 15px 20px;
+    font-size: 1rem;
+    border: 1px solid var(--color-border);
+    border-radius: 5px;
+    margin-right: 10px; /* Space between input and button */
+    outline: none;
+}
+
+.demo-button {
+    background-color: var(--color-pink);
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    /* To match the hover effect in the original design */
+    box-shadow: 0 4px 6px rgba(237, 64, 110, 0.4); 
+}
+
+.demo-button:hover {
+    background-color: #d1305c;
+}
+
+.demo-button span {
+    margin-left: 5px;
+}
+
+
+
+
+/* --- 6. Mockup Placeholder --- */
+/* In a real project, you'd use a single image/SVG for this */
+.device-mockups {
+    /* Simulating the space the mockups take */
+    width: 100%;
+    max-width: 600px; 
+    height: 450px;
+    /* You would replace the background property below with a
+       properly positioned image of the mockups. */
+    background-color: #f0f0f0; 
+    background-image: url('placeholder-mockup.png'); /* Replace with actual image path */
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    /* Adding a subtle shadow to represent the devices */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); 
+    border-radius: 10px;
+}
+.device-mockups img{
+  max-width: 100%;
+  height: auto;
+}
+/* --- 7. Basic Responsiveness (for smaller screens) --- */
+@media (max-width: 900px) {
+    .container {
+        flex-direction: column;
+        padding: 50px 20px;
+    }
+
+    .content-left {
+        padding-right: 0;
+        margin-bottom: 50px;
+        text-align: center;
+    }
+    
+    .main-heading {
+        font-size: 2.5rem;
+    }
+    
+    .demo-button {
+        width: 100%;
+    }
+    
+
+    
+    /* Hide some of the larger decorations on mobile */
+    .middle-right-large {
+        display: none;
+    }
+}
+
+problem-solution-section {
+    padding: 100px 50px;
+    position: relative;
+    /* Ensure no content overlaps the absolutely positioned arrow/circle */
+    overflow: hidden; 
+}
+
+.content-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center; /* Vertically center the text and image */
+    justify-content: space-between;
+}
+
+/* --- 3. Text Column (Left) --- */
+.text-column {
+    flex: 1; /* Allows it to take up available space */
+    max-width: 50%; /* Limit its width relative to the section */
+    padding-right: 50px;
+}
+
+.section-heading {
+    font-size: 2.5rem;
+    font-weight: 800;
+    line-height: 1.3;
+    color: var(--color-text-dark);
+    margin-bottom: 20px;
+}
+
+.section-heading strong {
+    font-weight: 800;
+}
+
+.section-text {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--color-text-paragraph);
+    max-width: 90%;
+}
+
+.section-text strong {
+    font-weight: bold;
+    color: var(--color-text-dark);
+}
+
+/* --- 4. Illustration Column (Right) --- */
+.illustration-column {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.illustration-placeholder {
+    /* Set a size to resemble the illustration's dimensions */
+    width: 450px; 
+    height: 450px; 
+    background-color: transparent;
+    /* In a real project, replace background-color with a background-image 
+       or use an actual <img> tag for the illustration */
+    background-image: url('illustration.png'); /* Replace with actual image path */
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* --- 5. Decorative Elements --- */
+.decorative-circle {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: var(--color-decor-yellow);
+    opacity: 0.7;
+    /* Position the circle below the content, centered */
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 50%); /* Center horizontally and drop down half its height */
+    z-index: 1; /* Keep it above the background */
+}
+
+.scroll-to-top-arrow {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background-color: var(--color-accent-pink);
+    color: white;
+    border-radius: 8px;
+    text-align: center;
+    line-height: 50px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.2s;
+}
+
+.scroll-to-top-arrow:hover {
+    background-color: #d1305c;
+}
+
+
+/* --- 6. Basic Responsiveness --- */
+@media (max-width: 900px) {
+    .content-wrapper {
+        flex-direction: column; /* Stack columns vertically */
+        text-align: center;
+    }
+    
+    .text-column {
+        max-width: 100%;
+        padding-right: 0;
+        margin-bottom: 40px;
+    }
+    
+    .section-text {
+        max-width: 100%;
+    }
+
+    .illustration-placeholder {
+        /* Reduce illustration size on smaller screens */
+        width: 300px; 
+        height: 300px;
+    }
 }

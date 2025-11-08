@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Contact Us | Medical Perception</title>
+    
+    <link rel="stylesheet" href="/style/style.css" />
+
+    <style>
+        /* This adds the background pattern to your page */
+        .app-page {
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='10' viewBox='0 0 10 10'%3E%3Ccircle fill='%23E8E8E8' cx='5' cy='5' r='0.5'/%3E%3C/svg%3E");
+            background-repeat: repeat;
+            background-color: #f7f7f7; /* A light gray fallback color */
+        }
+    </style>
+</head>
+
+<body class="app-page">
+    <header class="topbar">
+        <div class="brand">
+        <img class="logo" src="img/logo2.png" alt="">
+      </div>
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="contact.html" class="active">Contact</a>
+        </nav>
+        <div class="top-actions">
+            <button id="logout-btn"  class="btn outline">
+                <a href="login.html">Login</a></button>
+        </div>
+    </header>
+
+    <main class="container single">
+        <section class="card">
+            <h2>Contact Us</h2>
+            <p>We'd love to hear from you. For any suggestions, feedback, or questions about the app, please reach out to us directly using the methods below.</p>
+
+            <hr style="border: 0; height: 1px; background: #eee; margin: 2rem 0;">
+
+            <div class="contact-details">
+                <h3>Get in Touch</h3>
+                
+                <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem;">General Inquiries</h4>
+                <ul style="list-style: none; padding-left: 0;">
+                    <li style="padding: 0.3rem 0;">
+                        📧 **Email:** <a href="mailto:support@medicalperception.com">support@medicalperception.com</a>
+                    </li>
+                    <li style="padding: 0.3rem 0;">
+                        📞 **Phone:** +1 (555) 123-4567 (Available M-F, 9am - 5pm EST)
+                    </li>
+                </ul>
+
+                <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem;">Our Office</h4>
+                <address style="font-style: normal; line-height: 1.6;">
+                    Medical Perception HQ<br>
+                    101 Health Tech Plaza, Suite 400<br>
+                    Innovation City, TX 78701<br>
+                    United States
+                </address>
+            </div>
+
+        </section>
+    </main>
+
+    <footer class="site-footer small muted">
+        © <span id="year"></span> Medical Perception
+    </footer>
+
+    <script src="/script/script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // This function would be in your script.js file
+            // to set the year, welcome message, etc.
+            if (typeof initPage === 'function') {
+                initPage();
+            } else if (typeof initContactPage === 'function') {
+                initContactPage();
+            }
+        });
+    </script>
+</body>
+</html>

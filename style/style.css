@@ -508,7 +508,7 @@ a:hover {
   border-radius: var(--border-radius);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
   padding: 1.5rem 2rem;
-  margin-bottom: 2rem;
+  margin-top: 10vh;
 }
 .flex{
   display: flex;
@@ -1013,3 +1013,6 @@ problem-solution-section {
         height: 300px;
     }
 }
+
+
+

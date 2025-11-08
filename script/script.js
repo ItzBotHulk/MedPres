@@ -335,3 +335,44 @@ function initAboutTestimonials() {
     loadTestimonials();
   });
 }
+
+
+/**
+ * Handles basic page initialization (setting year, mock user, form setup).
+ */
+function initPage() {
+  // 1. Set the current year in the footer
+  const yearElement = document.getElementById('year');
+  if (yearElement) {
+    yearElement.textContent = new Date().getFullYear();
+  }
+
+  // 2. Mock a logged-in user welcome message
+  const welcomeElement = document.getElementById('welcome-user');
+  if (welcomeElement) {
+    welcomeElement.textContent = 'Welcome, Dr. Smith!';
+  }
+
+  // 3. Simple Contact Form Submission Handler
+  const contactForm = document.getElementById('contact-form');
+  const contactMsg = document.getElementById('contact-msg');
+
+  if (contactForm && contactMsg) {
+    contactForm.addEventListener('submit', (event) => {
+      event.preventDefault(); // Prevent default form submission
+
+      // Simulate sending data
+      contactMsg.className = 'msg success';
+      contactMsg.textContent = '✅ Message sent successfully! We will respond within 48 hours.';
+      
+      // Clear the form after submission
+      contactForm.reset();
+
+      // Optional: Hide the message after a few seconds
+      setTimeout(() => {
+        contactMsg.textContent = '';
+        contactMsg.className = 'msg';
+      }, 5000);
+    });
+  }
+}

@@ -1,6 +1,6 @@
 MedPres (Medical Perception) - Front-End
 
-MedPres (Medical Perception) is a front-end demonstration project for a modern medical application. It showcases a complete, responsive user interface built purely with HTML, CSS, and plain JavaScript, without any backend.
+    MedPres (Medical Perception) is a front-end demonstration project for a modern medical application. It showcases a complete, responsive user interface built purely with HTML, CSS, and plain JavaScript, without any backend.
 
 All user data, including login and registration details, is simulated and stored in the browser's localStorage.
 

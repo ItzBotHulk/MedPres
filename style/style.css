@@ -19,25 +19,12 @@
   box-sizing: border-box
 }
 
-
-/* 
-body {
-  margin: 0;
-  background: linear-gradient(180deg, var(--bg), #eef3f9);
-  color: #102a43;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  line-height: 1.4;
-} */
-
 #symptom-other {
   padding: 5%;
   height: 5vh;
   border-radius: 10px;
   border: 1px solid #f0f4f8;
 }
-
-/* old design */
 
 
 /* top bar */
@@ -938,13 +925,10 @@ problem-solution-section {
 }
 
 .illustration-placeholder {
-    /* Set a size to resemble the illustration's dimensions */
     width: 450px; 
     height: 450px; 
     background-color: transparent;
-    /* In a real project, replace background-color with a background-image 
-       or use an actual <img> tag for the illustration */
-    background-image: url('illustration.png'); /* Replace with actual image path */
+    background-image: url('illustration.png'); 
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -958,11 +942,10 @@ problem-solution-section {
     border-radius: 50%;
     background-color: var(--color-decor-yellow);
     opacity: 0.7;
-    /* Position the circle below the content, centered */
     bottom: 0;
     left: 50%;
-    transform: translate(-50%, 50%); /* Center horizontally and drop down half its height */
-    z-index: 1; /* Keep it above the background */
+    transform: translate(-50%, 50%); 
+    z-index: 1; 
 }
 
 .scroll-to-top-arrow {
@@ -993,7 +976,7 @@ problem-solution-section {
 /* --- 6. Basic Responsiveness --- */
 @media (max-width: 900px) {
     .content-wrapper {
-        flex-direction: column; /* Stack columns vertically */
+        flex-direction: column;
         text-align: center;
     }
     
@@ -1008,7 +991,6 @@ problem-solution-section {
     }
 
     .illustration-placeholder {
-        /* Reduce illustration size on smaller screens */
         width: 300px; 
         height: 300px;
     }

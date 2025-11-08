@@ -26,7 +26,7 @@
 
 <li>Clone the repository (or download the files):</li>
 <span style="color:white; background-color:gray; height:20vh; width:60vw;">
-git clone [https://github.com/ItzBotHulk/MedPres)
+git clone [https://github.com/ItzBotHulk/MedPres]
 </span>
 
 <li>Open the <span style="color:white; background-color:gray;">index.html</span> file:
